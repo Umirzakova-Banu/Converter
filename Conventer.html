@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<title>Meters to cm Length Converter</title>
+<body>
+
+<h2>Ұзындық түрлендіргіші</h2>
+<p>Мәнді түрлендіру үшін метр өрісіне мәнді енгізіңіз:</p>
+
+<p>
+  <label>Метр</label>
+  <input id="inputMeters" type="number" placeholder="Meters" oninput="LengthConverter(this.value)" onchange="LengthConverter(this.value)">
+</p>
+<p>Сантиметр: <span id="outputcm"></span></p>
+<p>Фут: <span id="outputFeet"></span></p>
+<p>Дюйм: <span id="outputInches"></span></p>
+<p>Ярд: <span id="outputYards"></span></p>
+<p>Километр: <span id="outputKilometers"></span></p>
+<p>Миль: <span id="outputMiles"></span></p>
+
+<script>
+function LengthConverter(valNum) {
+  document.getElementById("outputcm").innerHTML=valNum/0.01;
+document.getElementById("outputFeet").innerHTML=valNum*3.2808;
+document.getElementById("outputInches").innerHTML=valNum*39.370;
+document.getElementById("outputYards").innerHTML=valNum*1.0936;
+document.getElementById("outputKilometers").innerHTML=valNum/1000;
+document.getElementById("outputMiles").innerHTML=valNum*0.00062137;
+}
+</script>
+</body>
+</html>
